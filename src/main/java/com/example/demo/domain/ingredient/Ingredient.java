@@ -1,8 +1,6 @@
-package com.example.demo.domain.pizza.ingredient;
+package com.example.demo.domain.ingredient;
 
 import java.util.UUID;
-
-
 
 import lombok.Getter;
 import lombok.Value;
@@ -32,13 +30,13 @@ public class Ingredient {
     public boolean equals(Object o) {
         
        if(o instanceof IngredientId i){
-        return i.value.equals(id.value);
+        return i.equals(id);
        }
        return false;
     }
     @Override
-    public int hashCode(){
-        return id.value.hashCode();
+    public int hashCode(){        
+        return id.hashCode();
     }
     @Value
     public static class IngredientId{
