@@ -5,13 +5,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import com.example.demo.common.AgregateRoot;
 import com.example.demo.domain.pizza.exceptions.ExceptionPizza;
 
 import lombok.Getter;
 import lombok.Value;
 
 @Getter
-public class Pizza {
+public class Pizza extends AgregateRoot {
     private final PizzaId id;
     private String name;
     private String description;
