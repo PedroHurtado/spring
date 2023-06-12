@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import com.example.demo.domain.pizza.exceptions.ExceptionPizza;
+
 import lombok.Getter;
 import lombok.Value;
 
@@ -33,9 +35,12 @@ public class Pizza {
     }
 
     public void removeIngredient(IngredientPizza ingredient) {
-        if (this.ingredients.contains(ingredient)) {
-            this.ingredients.remove(ingredient);
+        if (!this.ingredients.contains(ingredient)) {
+            throw new ExceptionPizza(
+                "el ingrediente no existe en la pizza", 
+                1500);
         }
+        this.ingredients.remove(ingredient);
     }
 
     public double getPrice() {
