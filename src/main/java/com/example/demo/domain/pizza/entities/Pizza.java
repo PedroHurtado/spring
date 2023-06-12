@@ -1,4 +1,4 @@
-package com.example.demo.domain.pizza;
+package com.example.demo.domain.pizza.entities;
 
 import java.util.HashSet;
 import java.util.List;
