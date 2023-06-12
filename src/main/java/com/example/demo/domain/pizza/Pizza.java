@@ -59,6 +59,12 @@ public class Pizza {
         return new Pizza(id, name, description, url);
     }
 
+    public void udpate(String name, String description, String url){
+        this.name = name;
+        this.description = description;
+        this.url = url;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof PizzaId p) {
