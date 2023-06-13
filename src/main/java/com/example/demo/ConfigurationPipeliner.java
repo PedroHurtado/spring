@@ -13,7 +13,10 @@ import an.awesome.pipelinr.Pipelinr;
 public class ConfigurationPipeliner {
     
      @Bean
-    Pipeline pipeline(ObjectProvider<Command.Handler> commandHandlers, ObjectProvider<Notification.Handler> notificationHandlers, ObjectProvider<Command.Middleware> middlewares) {
+    Pipeline pipeline(
+            ObjectProvider<Command.Handler> commandHandlers, 
+            ObjectProvider<Notification.Handler> notificationHandlers, 
+            ObjectProvider<Command.Middleware> middlewares) {
         return new Pipelinr()
           .with(commandHandlers::stream)
           .with(notificationHandlers::stream)

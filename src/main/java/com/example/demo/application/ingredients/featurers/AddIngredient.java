@@ -33,7 +33,7 @@ public class AddIngredient {
         }
     }
 
-    public record Request(String nane, double price) implements Command<Voidy> {
+    public record Request(String name, double price) implements Command<Voidy> {
 
     }
 
@@ -48,7 +48,7 @@ public class AddIngredient {
 
         @Override
         public Voidy handle(Request arg0) {
-            var ingredient = Ingredient.Create(new IngredientId(UUID.randomUUID()), arg0.nane, arg0.price);
+            var ingredient = Ingredient.Create(new IngredientId(UUID.randomUUID()), arg0.name, arg0.price);
             repository.add(ingredient);
             return new Voidy();
         }
