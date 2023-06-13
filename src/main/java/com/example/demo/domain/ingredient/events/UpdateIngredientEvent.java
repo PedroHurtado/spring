@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import com.example.demo.common.EventBase;
 
-public class UpdateIngredientEvent extends EventBase {
+public class UpdateIngredientEvent extends EventBase<UpdateIngredientEvent.Data>{
     public UpdateIngredientEvent(UUID id, Date date, String type, Data data){
         super(id,date,type,data);
     }
