@@ -42,10 +42,12 @@ public class IngredientsRepositoryImpl  implements IngredientRepository{
        
     }
     private void save(Ingredient ingredient){
+        System.out.println("before publish events");
         if(ingredient instanceof AgregateRoot ag){
             ag.getEvents().forEach(n->pipeline.send(n));
             ag.clear();
         }
+        System.out.println("after publish events");
     }
     
 }

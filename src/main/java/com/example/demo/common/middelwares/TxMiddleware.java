@@ -11,9 +11,9 @@ public class TxMiddleware implements Command.Middleware {
 
     @Override
     public <R, C extends Command<R>> R invoke(C command, Next<R> next) {
-        // start tx
+        System.out.println("txt before");
         R response = next.invoke();
-        // end tx
+        System.out.println("txt after");
         return response;
     }
 }

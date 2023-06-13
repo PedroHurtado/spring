@@ -19,6 +19,7 @@ import an.awesome.pipelinr.Voidy;
 
 @Configuration
 public class AddIngredient {
+   
     @RestController
     @RequestMapping("api/v1/ingredients")
     public class Controller {
@@ -29,7 +30,9 @@ public class AddIngredient {
         }
         @PostMapping
         public void add(@RequestBody Request request) {
+            System.out.println("request");
             pipeline.send(request);
+            System.out.println("response");
         }
     }
 

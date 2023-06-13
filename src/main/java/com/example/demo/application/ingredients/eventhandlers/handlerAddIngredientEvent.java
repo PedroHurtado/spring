@@ -11,7 +11,7 @@ public class handlerAddIngredientEvent implements Notification.Handler<AddIngred
 
     @Override
     public void handle(AddIngredientEvent arg0) {
-
+        System.out.println("process events");
         
     }
 
