@@ -31,7 +31,7 @@ public class Ingredient extends AgregateRoot {
         var updateIngredientEvent = new UpdateIngredientEvent(
             UUID.randomUUID(),
             new Date(), 
-            "add-ingredient", 
+            "update-ingredient", 
             new UpdateIngredientEvent.Data(id.value, name, price)
         );
         add(updateIngredientEvent);
