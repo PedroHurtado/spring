@@ -29,12 +29,19 @@ public class IngredientsRepositoryImpl  implements IngredientRepository{
 
     @Override
     public void update(Ingredient entity) {
-       
+       save(entity);
     }
 
     @Override
     public Ingredient get(IngredientId id) {
-        return null;
+        //return data.stream().filter(i->i.getId().equals(id)).findFirst();
+
+        //return data.stream().filter(i->i.getId().equals(id))
+            //1. Exception handler controladvice
+            //2. Sitio donde si el optional es null Notfound
+            
+        return data.stream().toList().get(0);
+        
     }
 
     @Override

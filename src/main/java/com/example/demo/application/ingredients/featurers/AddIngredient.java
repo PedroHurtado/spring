@@ -51,6 +51,8 @@ public class AddIngredient {
 
         @Override
         public Voidy handle(Request arg0) {
+            //1. leo 
+            //2. si exsite modifico
             var ingredient = Ingredient.Create(new IngredientId(UUID.randomUUID()), arg0.name, arg0.price);
             repository.add(ingredient);
             return new Voidy();
